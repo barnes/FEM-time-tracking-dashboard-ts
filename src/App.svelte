@@ -17,7 +17,8 @@
 </script>
 
 <main>
-  <UserCard {user} />
+  <div class="user"><UserCard {user} /></div>
+
   <div class="cards">
     {#each data as user}
       <CatCard data={user} />
@@ -26,13 +27,33 @@
 </main>
 
 <style>
-  main {
-    display: flex;
+  @media (min-width: 1100px) {
+    main {
+      display: flex;
+      width: 1100px;
+    }
+    .user {
+      width: 25%;
+      margin-right: 1rem;
+    }
+    .cards {
+      width: 75%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 1.5rem;
+    }
   }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    width: 66%;
+  @media (max-width: 1100px) {
+    main {
+      width: 400px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .user {
+      margin-bottom: 2rem;
+    }
+    .cards {
+    }
   }
 </style>
