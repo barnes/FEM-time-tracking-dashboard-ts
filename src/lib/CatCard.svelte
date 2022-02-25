@@ -20,7 +20,19 @@
 
 <div class="card">
   <div class="header-image" style="background-color:var(--{icon})">
-    <img src={`/assets/icon-${icon}.svg`} alt="" class="icon" />
+    {#if icon === "play"}
+      <img src={play} alt="" class="icon" />
+    {:else if icon === "work"}
+      <img src={work} alt="" class="icon" />
+    {:else if icon === "self-care"}
+      <img src={selfcare} alt="" class="icon" />
+    {:else if icon === "social"}
+      <img src={social} alt="" class="icon" />
+    {:else if icon === "study"}
+      <img src={study} alt="" class="icon" />
+    {:else if icon === "exercise"}
+      <img src={exercise} alt="" class="icon" />
+    {/if}
   </div>
   <div class="content">
     <div class="top">
