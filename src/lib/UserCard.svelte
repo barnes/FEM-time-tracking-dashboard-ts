@@ -16,27 +16,30 @@
     </div>
   </div>
   <div class="bottom-section">
-    <a
-      href="#"
+    <p
       on:click={() => {
         timeframe.set("daily");
       }}
-      class:active={currentTimeframe === "daily"}>Daily</a
+      class:active={currentTimeframe === "daily"}
     >
-    <a
-      href="#"
+      Daily
+    </p>
+    <p
       on:click={() => {
         timeframe.set("weekly");
       }}
-      class:active={currentTimeframe === "weekly"}>Weekly</a
+      class:active={currentTimeframe === "weekly"}
     >
-    <a
-      href="#"
+      Weekly
+    </p>
+    <p
       on:click={() => {
         timeframe.set("monthly");
       }}
-      class:active={currentTimeframe === "monthly"}>Monthly</a
+      class:active={currentTimeframe === "monthly"}
     >
+      Monthly
+    </p>
   </div>
 </div>
 
@@ -80,11 +83,12 @@
       display: flex;
       justify-content: space-between;
     }
-    a {
+    p {
       margin-bottom: 1rem;
       color: var(--paleblue);
       font-size: 1.25rem;
       text-decoration: none;
+      cursor: pointer;
     }
   }
   @media (min-width: 1100px) {
@@ -119,12 +123,13 @@
       font-weight: 400;
       color: var(--paleblue);
     }
-    a {
+    p {
       display: block;
       margin-bottom: 1rem;
       color: var(--paleblue);
       font-size: 1.25rem;
       text-decoration: none;
+      cursor: pointer;
     }
   }
 
