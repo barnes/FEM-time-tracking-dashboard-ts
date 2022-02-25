@@ -20,7 +20,7 @@
 
 <div class="card">
   <div class="header-image" style="background-color:var(--{icon})">
-    <img src={`/src/assets/icon-${icon}.svg`} alt="" class="icon" />
+    <img src={`/assets/icon-${icon}.svg`} alt="" class="icon" />
   </div>
   <div class="content">
     <div class="top">
