@@ -81,7 +81,7 @@
       position: absolute;
       background-color: var(--darkblue);
       top: 15%;
-      padding: 2rem;
+      padding: 2rem 2rem 1rem 2rem;
       border-radius: 1rem;
       width: 100%;
     }
